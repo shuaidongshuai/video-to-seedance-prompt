@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 运行产物（证据帧、抽帧、中间规格、校准记录等属于本机工作区，不入库）
+frames/
+outputs/
+*.mp4
+*.wav
+*.jpg
+*.jpeg
+*.png
+!docs/**/*.png
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
