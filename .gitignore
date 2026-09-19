@@ -20,3 +20,11 @@ outputs/
 .idea/
 .DS_Store
 Thumbs.db
+
+# 放行 README 展示用的演示视频与预览图
+!assets/
+!assets/**/*.mp4
+!assets/**/*.jpg
+!assets/**/*.jpeg
+!assets/**/*.png
+!assets/**/*.gif

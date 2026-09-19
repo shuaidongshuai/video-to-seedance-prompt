@@ -6,6 +6,28 @@
 
 ---
 
+## 效果展示
+
+用同一段 4.6 秒原片（女性角色高踢腿击碎红衣目标，红色背景 + 墨渍爆裂）实测三种生成模式。角色按用户提供的红发双马尾角色图替换，仅复刻可观察的动作链与构图。
+
+**四行抽帧对比**（从上到下：原片 / 图生视频 / 深度图生视频 / 深度渲染图生视频）：
+
+![四模式抽帧对比](assets/preview/compare.jpg)
+
+**循环预览与完整视频**：
+
+| 模式 | 循环预览 | 完整视频 |
+|---|---|---|
+| 原片（分析证据） | ![原片](assets/preview/original.gif) | [▶ 播放](assets/videos/original.mp4) |
+| 图生视频 `ASSET_GUIDED` | ![图生视频](assets/preview/image2video.gif) | [▶ 播放](assets/videos/image2video.mp4) |
+| 深度图生视频 `DEPTH_GUIDED` | ![深度图生视频](assets/preview/depth2video.gif) | [▶ 播放](assets/videos/depth2video.mp4) |
+| 深度渲染图生视频 `COLOR_STORYBOARD` | ![深度渲染图生视频](assets/preview/depth-color-storyboard.gif) | [▶ 播放](assets/videos/depth-color-storyboard.mp4) |
+
+> GIF 为 320×180、10fps 的循环预览；完整视频为原始分辨率。点击"播放"在浏览器新标签打开 mp4。
+> 观察要点：三版都复现了"起势→高踢→击中→红背墨渍爆裂"的动作相位；深度渲染版在金色起手光效、对峙站位与击中爆裂的时序上最完整。
+
+---
+
 ## 一、它能做什么
 
 ### 1. 生产级视频复刻（三种模式，按控制力递增）
