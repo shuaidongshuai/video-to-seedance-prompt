@@ -28,6 +28,39 @@
 
 ---
 
+## 安装
+
+这是一个 Codex / 兼容 Agent 运行的 Skill（`SKILL.md` + `references/` + `scripts/`）。`.codex/skills/` 下每个子文件夹就是一个 skill，文件夹名必须与 `SKILL.md` 里的 `name` 字段一致，即 `video-to-seedance-prompt`。
+
+### 方式一：下载 ZIP（无需 git，推荐）
+
+1. 打开仓库主页 https://github.com/shuaidongshuai/video-to-seedance-prompt
+2. 点绿色 **Code** → **Download ZIP**；
+3. 解压后会得到 `video-to-seedance-prompt-main`，**把文件夹重命名为 `video-to-seedance-prompt`**；
+4. 把整个文件夹放到 Codex 的 skills 目录：
+   - Windows：`C:\Users\<你的用户名>\.codex\skills\video-to-seedance-prompt`
+   - 你本机即 `C:\Users\dong\.codex\skills\video-to-seedance-prompt`
+5. 重启 Codex CLI，直接说"帮我复刻这个视频"即可触发。
+
+最终目录长这样：
+
+```
+C:\Users\dong\.codex\skills\video-to-seedance-prompt\
+├── SKILL.md
+├── scripts\
+└── references\
+```
+
+### 方式二：git clone
+
+```powershell
+git clone git@github.com:shuaidongshuai/video-to-seedance-prompt.git "$env:USERPROFILE\.codex\skills\video-to-seedance-prompt"
+```
+
+> 依赖：Python 3.10+、`ffmpeg`/`ffprobe` 在 `PATH` 上；深度模式还需本机已部署 [Video-Depth-Anything](https://github.com/wyzor/Video-Depth-Anything)，路径写在 `references/local-environment.md`。详见下文"环境依赖"。
+
+---
+
 ## 一、它能做什么
 
 ### 1. 生产级视频复刻（三种模式，按控制力递增）
