@@ -114,6 +114,8 @@
 - `CANDIDATE`：看起来可复用，但只有单次结果或根因仍有竞争解释，暂不修改 Skill。
 - `PROMOTED`：可复用且证据充分，自动写入 Skill。
 
+在晋升判断之前，先按 `SKILL.md` 的“反馈分层与记忆边界”将反馈分类为 `PROJECT_LOCAL`、`USER_PREFERENCE` 或 `SKILL_GENERAL`。三者写入位置不同：项目事实只进项目校准记录；明确的长期个人偏好进 `preferences/`；只有通用知识参与 `LOCAL / CANDIDATE / PROMOTED` 的 Skill 晋升判断。不要把个人审美偏好包装成通用生成规律。
+
 满足以下任一条件才可晋升为 `PROMOTED`：
 
 - 同一种误读在至少两个生成版本中重复，且能追溯到相同的提示词缺陷。
